@@ -7,10 +7,8 @@ let maxSetAWeight = 0
 
 function maxBoxWeight(curIndex: number, curWeight: number, curSetA: number[]) {
     if (curWeight > totalWeight/2) {
-
         const curResSum = curSetA.reduce((previous, cur) => previous + cur, 0)
         const isBetterResult = (curSetA.length < minimumSizeOfSetA) || (curSetA.length == minimumSizeOfSetA && curResSum > maxSetAWeight)
-
         if (isBetterResult) {
             minimumSizeOfSetA = curSetA.length
             setA = curSetA.reverse()
